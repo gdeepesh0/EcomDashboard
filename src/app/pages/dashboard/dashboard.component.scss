@@ -1,0 +1,33 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    // Filter Bar Section
+    app-filter-bar {
+      margin-bottom: 24px;
+      width: 100%;
+    }
+  
+    // Product Grid Section
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+  
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+    }
+  
+    // Loading Spinner
+    .loading-spinner {
+      margin: 24px auto;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #555;
+    }
+  }
+  

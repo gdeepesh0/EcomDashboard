@@ -1,0 +1,31 @@
+<div class="filter-bar">
+  <!-- Category Filter -->
+  <div class="filter-item">
+    <label for="category">Select Category</label>
+    <select id="sort" [(ngModel)]="category">
+      <option selected value="">Select</option>
+      <option [value]="category.id" *ngFor="let category of categories">{{ category.name }}</option>
+    </select>
+  </div>
+
+  <!-- Price Range Filter -->
+  <div class="filter-item">
+    <label for="min-price">Min Price</label>
+    <input id="min-price" type="number" [(ngModel)]="minPrice" />
+  </div>
+  <div class="filter-item">
+    <label for="max-price">Max Price</label>
+    <input id="max-price" type="number" [(ngModel)]="maxPrice" />
+  </div>
+  <!-- Sorting Options -->
+  <div class="filter-item">
+    <label for="sort">Sort By</label>
+    <select id="sort" [(ngModel)]="sort">
+      <option value="priceAsc">Price: Low to High</option>
+      <option value="priceDesc">Price: High to Low</option>
+    </select>
+  </div>
+
+  <!-- Apply Button -->
+  <button class="apply-button" (click)="applyFilters()">Apply</button>
+</div>

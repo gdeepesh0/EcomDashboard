@@ -1,0 +1,14 @@
+<div class="dashboard">
+    <app-filter-bar (filterChange)="applyFilters($event)"></app-filter-bar>
+    <div class="product-grid">
+        <ng-container *ngFor="let product of products">
+            <app-product-card *ngIf="product" [product]="product"
+                (productClick)="openProductModal($event)"></app-product-card>
+        </ng-container>
+
+    </div>
+    <div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+    <!-- Modal -->
+    <app-product-modal *ngIf="selectedProductId" [productId]="selectedProductId" (close)="selectedProductId = null"></app-product-modal>
+
+</div>

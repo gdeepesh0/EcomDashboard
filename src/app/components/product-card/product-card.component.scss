@@ -1,0 +1,45 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .product-details {
+        margin-top: 12px;
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .product-category {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .product-price {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .product-rating {
+            color: #ffc107; // Gold for stars
+            font-size: 0.8rem;
+        }
+    }
+}

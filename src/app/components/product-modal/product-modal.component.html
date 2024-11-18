@@ -1,0 +1,16 @@
+<div class="modal-overlay" (click)="closeModal()" *ngIf="productDetails">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <!-- Loading State -->
+        <div *ngIf="isLoading" class="loading-spinner">Loading...</div>
+
+        <!-- Product Details -->
+        <div *ngIf="productDetails">
+            <img [src]="productDetails.images[0]" alt="{{ productDetails.title }}" class="product-image" />
+            <h2>{{ productDetails.title }}</h2>
+            <p>{{ productDetails.description }}</p>
+            <p><strong>Price:</strong> ${{ productDetails.price.toFixed(2) }}</p>
+            <p><strong>Category:</strong> {{ productDetails.category.name }}</p>
+            <button class="close-button" (click)="closeModal()">Close</button>
+        </div>
+    </div>
+</div>
